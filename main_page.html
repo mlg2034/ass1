@@ -16,20 +16,22 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
-            background-color: #333;
+            background-image: linear-gradient(to bottom right, #584a92, #b2a6df);
             color: white;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        nav ul {
+        header nav ul {
             display: flex;
+            align-items: center;
         }
 
-        nav li {
+        header li {
+            margin: 0 15px;
             margin-right: 20px;
         }
 
@@ -38,6 +40,7 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 16px;
+            padding-right: 20px;
         }
 
         body {
@@ -95,12 +98,7 @@
             font-weight: 600;
         }
 
-        p {
-            line-height: 1.5;
-            font-size: 14px;
-            color: #333;
-        }
-
+        p,
         li {
             line-height: 1.5;
             font-size: 14px;
@@ -108,14 +106,13 @@
         }
 
         .about-us {
-            background-color: blanchedalmond;
             font-size: 15px;
         }
 
         .contact-us {
             background-color: white;
-            padding: 40px;
-            margin-top: 40px;
+            padding: 20px;
+            margin-top: 20px;
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -134,43 +131,33 @@
 
         .contact-us label {
             font-size: 14px;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        .contact-us input[type="text"],
-        .contact-us input[type="email"],
-        .contact-us textarea {
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
             margin-bottom: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-us input[type="submit"] {
-            background-color: #91878b;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            font-size: 14px;
-            margin-bottom: 5px;
             font-weight: 600;
         }
 
-        .contact-us input[type="submit"]:hover {
-            background-color: #746c6f;
-        }
-
+        .contact-us input,
         .contact-us textarea {
-            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            width: 100%;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
         }
 
-        .contact-us input[type="submit"] {
-            width: 100%;
+        .contact-us button {
+            background-color: #584a92;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .contact-us button:hover {
+            background-color: #b2a6df;
         }
 
         .footer {
@@ -188,6 +175,7 @@
 
 <body>
     <header>
+        <h1>Team Landing Page</h1>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -196,59 +184,60 @@
             </ul>
         </nav>
     </header>
-    <div class="about-us"></div>
     <div class="container">
         <div class="team-photos">
             <a href="file:///C:/Users/Askhat/Desktop/AITU/web%20dev/ass1/katya.html">
-                <img src="asset/IMG_9747.JPG" alt="Team Member 1" class="team-photo" />
+
+                <img class="team-photo" src="asset/IMG_9747.JPG" alt="Photo of team member 1" />
+                <p class="team-member-name">Ekaterina Pushkareva</p>
             </a>
-            <div class="team-member-name">Ekaterina</div>
-            <a href="file:///C:/Users/Askhat/Desktop/AITU/web%20dev/ass1/askhat.html">
-                <img src="asset/фотка.jpg" alt="Team Member 2" class="team-photo" />
-            </a>
-            <div class="team-member-name">Askhat</div>
-            <a href="file:///C:/Users/Askhat/Desktop/AITU/web%20dev/ass1/aidar.html">
-                <img src="asset/25c2fee73fbe5e16e151a32ee611fdd3.jpg" alt="Team Member 3" class="team-photo" />
-            </a>
-            <div class="team-member-name">Aidar</div>
             <a href="file:///C:/Users/Askhat/Desktop/AITU/web%20dev/ass1/dai.html">
-                <img src="asset/slam dunk.jpg" alt="Team Member 4" class="team-photo" />
+
+                <img class="team-photo" src="https://i.imgur.com/pB9NBgw.jpg" alt="Photo of team member 2" />
+                <p class="team-member-name">Dair Ussen</p>
             </a>
-            <div class="team-member-name">Dair</div>
+            <a href="file:///C:/Users/Askhat/Desktop/AITU/web%20dev/ass1/aidar.html">
+
+                <img class="team-photo" src="https://i.imgur.com/51XyaZC.jpg" alt="Photo of team member 3" />
+                <p class="team-member-name">Aidar Yeltay</p>
+            </a>
+            <a href="file:///C:/Users/Askhat/Desktop/AITU/web%20dev/ass1/askhat.html">
+
+                <img class="team-photo" src="asset/фотка.jpg" alt="Photo of team member 4" />
+                <p class="team-member-name">Askhat Kabytaev</p>
+            </a>
         </div>
+
         <div class="team-info">
-            <h1>About Our Team</h1>
-            <p>
-                Our team consists of highly skilled professionals with diverse
-                backgrounds and expertise. We are dedicated to providing top-notch
-                solutions for our clients and continuously strive for excellence.
+            <h1>About Us</h1>
+            <p class="about-us">
+                We are a team of professionals who are dedicated to providing the best
+                services to our clients. Our team consists of experts in various fields
+                such as web development, design, and marketing. We believe that by
+                working together, we can provide the most effective solutions for our
+                clients.
             </p>
-            <p>
-                Our team members have years of experience in their respective fields,
-                and they bring their unique perspectives to every project. We work
-                collaboratively to ensure the best results for our clients.
-            </p>
-            <p>
-                With our diverse team of experts, we are able to tackle a wide range
-                of challenges and provide innovative solutions that meet the needs of
-                our clients. We are passionate about our work and are committed to
-                delivering exceptional results.
-            </p>
+            <h1>Our Services</h1>
+            <ul>
+                <li>Web Development</li>
+                <li>Design</li>
+                <li>Marketing</li>
+            </ul>
             <div class="contact-us">
                 <h2>Contact Us</h2>
                 <form>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required />
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" />
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" />
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required />
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Enter your message"></textarea>
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-
-                    <input type="submit" />
+                    <button type="submit">Send Message</button>
                 </form>
             </div>
+
         </div>
     </div>
     <div class="footer">
@@ -256,7 +245,5 @@
     </div>
 
 </body>
-
-
 
 </html>
